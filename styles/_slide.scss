@@ -92,7 +92,7 @@
       }
     }
   }
-  &__btn{
+  &__btn, {
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -105,6 +105,7 @@
     border: none;
     background-color: transparent;
     span{
+      display: block;
       content: '';
       border-style: solid;
       border-color: $secondary;
@@ -112,13 +113,13 @@
       height: 1rem;
       transform: rotate(-45deg);
     }
-    &.prev{
+    &.owl-prev, &.prev{
       left: 2rem;
       span{
         border-width: 2px 0 0 2px;
       }
     }
-    &.next{
+    &.owl-next, &.next{
       right: 2rem;
       span{
         border-width: 0 2px 2px 0;
@@ -129,4 +130,10 @@
       &.next{right: 0;}
     }
   }  
+}
+
+.owl-nav{  
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }

@@ -88,23 +88,14 @@
 .date{
   &__slider{
     flex: 1;
-    width: 100%;
-    .slide__btn{
-      &.next{
-        right: -3rem;
-      }
-      &.prev{
-        left: -3rem;
-      }
-      @media screen and (min-width: 770px) {
-        display: none;
-      }
-    }
+    width: 100%;    
   }
   &__list{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 0;
+    margin: 0 3rem;
+    overflow: hidden;
     .num{
       font-size: 3.6rem;
       line-height: 1.2;
@@ -112,6 +103,13 @@
     .month{
       font-size: 2.4rem;
       line-height: 1.2;
+    }
+    .owl-nav{
+      left: -3rem;
+      width: calc(100% + 6rem);
+      .slide__btn{
+        top: -3.5rem;
+      }
     }
   }
   &__wrapper{
@@ -129,8 +127,7 @@
     }
     @media screen and (min-width: 1000px) {
       margin-bottom: 0;
-      margin-left: 2rem;
-      flex: 1;
+      margin-left: 0;
     }    
   }
   &__period{
