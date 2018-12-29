@@ -114,13 +114,13 @@
       transform: rotate(-45deg);
     }
     &.owl-prev, &.prev{
-      left: 2rem;
+      left: 0;
       span{
         border-width: 2px 0 0 2px;
       }
     }
     &.owl-next, &.next{
-      right: 2rem;
+      right: 0;
       span{
         border-width: 0 2px 2px 0;
       }      
@@ -133,7 +133,6 @@
 }
 
 .owl-nav{  
-    position: absolute;
+    position: static;
     width: 100%;
-    bottom: 0;
 }

@@ -1,11 +1,10 @@
 $(document).ready(function () {
   if ($(".owl-carousel").length) {
     $(".owl-carousel").owlCarousel({
-      nav: true
-      , navText: [
-      '<span class="slide__btn prev"><span></span></span>'
-      , '<span class="slide__btn next"><span></span></span>'
-    , ]
+      dots: false
+      , nav: true
+      , navElement: 'button class="slide__btn"'
+      , navText: ['<span></span>', '<span></span>']
       , responsive: {
         0: {
           items: 1
@@ -174,24 +173,33 @@ $(document).ready(function () {
     var map = new google.maps.Map(document.getElementById(id), myOptions);
     console.log(document.getElementById(id));
   }
+  
+  
   /*init tabs*/
   tabInit('.tabs');
+  
+  
   /*counter*/
-  if ($('.counter').length > 0) {
+  if ($('.counter').length) {
     var add = $('.counter').find('.add')
       , ded = $('.counter').find('.ded')
       , count = $('.counter').find('.count')[0]
-      , value = Number($('.counter').find('.count')[0].innerText);
+      , value = $('.qty').val();
+    $(count).text(value);
     add.on('click', function () {
-      value = value + 1;
-      $('input[name="quantity"]')[0].value = value;
+      value = +value + 1;
+      $('.qty').val(value);
       $(count).text(value);
+      console.log($('.qty').val());
     })
     ded.on('click', function () {
       value = value > 1 ? value - 1 : 1;
+      $('.qty').val(value);
       $(count).text(value);
     })
   }
+  
+  
   /*modals*/
   function closeModal() {
     $('body').removeClass('modal-open');
@@ -212,6 +220,8 @@ $(document).ready(function () {
       e.preventDefault();
       $(this).addClass('sent');
     })
+  
+  
     /*traspilate blog items matrix*/
   if ($('.blog__other').length > 0) {
     var blogList = $('.tab.active .blog__other').find('.other__item');
@@ -219,6 +229,8 @@ $(document).ready(function () {
     })).sort((a, b) => a.id % 3 - b.id % 3);
     $('.tab.active .blog__other').html(blogList.map((i, el) => $(el)[0]));
   }
+  
+  
   /*volume change*/
   if ($('.variations').length > 0) {
     var volumeSelect = $('.variations #pa_obem')[0];

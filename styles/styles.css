@@ -127,7 +127,7 @@
   color: #bebcbc; }
 
 /* line 1, Z:/project/keratin_max/code/styles/_btn.scss */
-.btn, button {
+.btn, .button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -142,8 +142,8 @@
   text-decoration: none;
   background-color: transparent;
   border: 2px solid #b29477; }
-  /* line 16, Z:/project/keratin_max/code/styles/_btn.scss */
-  .btn:after, button:after {
+  /* line 17, Z:/project/keratin_max/code/styles/_btn.scss */
+  .btn:after, .button:after {
     content: '';
     position: absolute;
     right: 1.5rem;
@@ -154,18 +154,18 @@
     border-style: solid;
     border-color: #b29477;
     border-width: 0 2px 2px 0; }
-  /* line 28, Z:/project/keratin_max/code/styles/_btn.scss */
-  .btn__more-wrapper, button__more-wrapper {
+  /* line 29, Z:/project/keratin_max/code/styles/_btn.scss */
+  .btn__more-wrapper, .button__more-wrapper {
     position: relative;
     display: flex;
     width: 100%;
     justify-content: center; }
-    /* line 33, Z:/project/keratin_max/code/styles/_btn.scss */
-    .btn__more-wrapper .btn, button__more-wrapper .btn {
+    /* line 34, Z:/project/keratin_max/code/styles/_btn.scss */
+    .btn__more-wrapper .btn, .button__more-wrapper .btn {
       margin: 0 auto -4rem;
       border-color: #bebcbc; }
-    /* line 37, Z:/project/keratin_max/code/styles/_btn.scss */
-    .btn__more-wrapper:before, button__more-wrapper:before {
+    /* line 38, Z:/project/keratin_max/code/styles/_btn.scss */
+    .btn__more-wrapper:before, .button__more-wrapper:before {
       content: '';
       position: absolute;
       top: auto;
@@ -174,8 +174,8 @@
       width: 100%;
       background-color: #bebcbc; }
     @media screen and (min-width: 1200px) {
-      /* line 28, Z:/project/keratin_max/code/styles/_btn.scss */
-      .btn__more-wrapper, button__more-wrapper {
+      /* line 29, Z:/project/keratin_max/code/styles/_btn.scss */
+      .btn__more-wrapper, .button__more-wrapper {
         margin: 0 6rem;
         width: calc(100% - 12rem); } }
 
@@ -414,13 +414,13 @@ form.sent .btn {
       transform: rotate(-45deg); }
     /* line 116, Z:/project/keratin_max/code/styles/_slide.scss */
     .slide__btn.owl-prev, .slide__btn.prev {
-      left: 2rem; }
+      left: 0; }
       /* line 118, Z:/project/keratin_max/code/styles/_slide.scss */
       .slide__btn.owl-prev span, .slide__btn.prev span {
         border-width: 2px 0 0 2px; }
     /* line 122, Z:/project/keratin_max/code/styles/_slide.scss */
     .slide__btn.owl-next, .slide__btn.next {
-      right: 2rem; }
+      right: 0; }
       /* line 124, Z:/project/keratin_max/code/styles/_slide.scss */
       .slide__btn.owl-next span, .slide__btn.next span {
         border-width: 0 2px 2px 0; }
@@ -434,9 +434,8 @@ form.sent .btn {
 
 /* line 135, Z:/project/keratin_max/code/styles/_slide.scss */
 .owl-nav {
-  position: absolute;
-  width: 100%;
-  bottom: 0; }
+  position: static;
+  width: 100%; }
 
 /* line 1, Z:/project/keratin_max/code/styles/_tabs.scss */
 .tabs {
@@ -2196,6 +2195,10 @@ body.modal-open {
     /* line 181, Z:/project/keratin_max/code/styles/_product.scss */
     .breadcrumbs__item:last-child {
       color: #b29477; }
+
+/* line 187, Z:/project/keratin_max/code/styles/_product.scss */
+.variations {
+  display: none; }
 
 /* line 1, Z:/project/keratin_max/code/styles/_enrollment.scss */
 .enrollment {
