@@ -2587,7 +2587,7 @@ header {
         margin: 0 auto 0 6rem; }
       /* line 62, Z:/project/keratin_max/code/styles/_header.scss */
       header.fixed .menu__wrapper {
-        padding: 0 6rem; } }
+        padding: 0 0 0 6rem; } }
 
 /* line 69, Z:/project/keratin_max/code/styles/_header.scss */
 .logo {
