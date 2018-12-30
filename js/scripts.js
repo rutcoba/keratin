@@ -234,7 +234,7 @@ $(document).ready(function () {
   /*volume change*/
   if ($('.variations').length > 0) {
     var volumeSelect = $('.variations #pa_obem')[0];
-    var price = $('.price__form').find('.woocommerce-Price-amount');
+    var price = $('.price__form').find('.woocommerce-Price-amount')[0];
     var visiblePrice = $('.price__wrapper>.price>.woocommerce-Price-amount')[0];
     var options = Array.from(volumeSelect.options).slice(1, );
     var controls = $('.product__control .volume');
@@ -245,7 +245,8 @@ $(document).ready(function () {
     $(document).on('click', '.volume__item', function (e) {
       $(this).siblings('.volume__item').removeClass('active');
       $(this).addClass('active');
-      $(visiblePrice).html(price[0].innerHTML);
+      console.log(price);
+      $(visiblePrice).html($(price).innerHTML);
     });
   }
 })
