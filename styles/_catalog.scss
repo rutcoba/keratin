@@ -54,6 +54,11 @@
           display: none;
         }
       }
+      .price{
+         color: $secondary;
+        font-size: 2.4rem;
+        font-weight: 400;
+      }
     }
     @media screen and (min-width: 700px) {
       .desc{
@@ -74,9 +79,6 @@
             display: flex;
             flex: 1;
           }
-        }
-        .btn{
-          margin-left: auto;
         }
       }
     }
