@@ -44,7 +44,8 @@
   
   &__slider{
     width: 100%;
-    margin-top: 4rem;    
+    margin-top: 4rem;  
+    background: url(../img/blot_slider.png) no-repeat center/contain;
     .price__wrapper{
       display: flex;
       align-items: center;
@@ -65,9 +66,12 @@
         position: absolute;
         top: 50%;
         left: 40%;
-        width: 50%;
+        width: 40%;
         transform: translate3d(0, -50%, 0);
         padding: 0;
+        .heading{
+          margin-bottom: 2rem;
+        }
       }
       .price__wrapper{
         display: flex;
@@ -78,6 +82,9 @@
           &__form{
             display: flex;
             flex: 1;
+          }
+          .text--grey{
+            margin-left: 5rem;
           }
         }
       }
