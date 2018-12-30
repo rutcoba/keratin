@@ -61,13 +61,33 @@
     border-width: 2px 0;
     background-color: transparent;
     cursor: pointer;
+    &:after{
+      content: '';
+      display: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: solid $secondary;
+      border-width: 2px 2px 0 0;
+    }
     &:first-child{
       margin-bottom: 2rem;
+      img{
+        margin-right: 2rem;
+      }
+      &:after{
+        transform: rotate(45deg);
+      }
     }
     &:last-child{
       flex-direction: row-reverse;
       .action__text{
         text-align: right;
+      }
+      img{
+        margin-left: 2rem;
+      }
+      &:after{
+        transform: rotate(-135deg);
       }
     }
     @media screen and (min-width: 600px) {
@@ -75,11 +95,23 @@
       border-width: 2px;
       margin: 0 !important;
     }
+    @media screen and (min-width: 770px) {
+      &:after{
+        display: flex;
+      }      
+    }
     @media screen and (min-width: 1400px) {
       padding: 4rem 8rem;
+      &:first-child{
+        padding-right: 4rem;
+      }
+      &:last-child{
+        padding-left: 4rem;
+      }
     }
   }
   &__text{
+    flex: 1;
     width: auto;
     padding: 1rem;
     text-align: left;
